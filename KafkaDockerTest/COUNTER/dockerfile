@@ -1,0 +1,6 @@
+FROM node:10
+WORKDIR /CounterApp
+COPY package.json /CounterApp
+RUN npm install
+COPY . /CounterApp
+CMD node counter.js

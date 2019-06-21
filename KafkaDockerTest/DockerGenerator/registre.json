@@ -1,0 +1,49 @@
+{
+    "API" : {
+        "name" : "api",
+        "dependences" : [
+            "kafka",
+            "zookeeper"
+        ],
+        "type" : {
+            "producer":false,
+            "listener":true
+        },
+        "topic_name" : "topic_test",
+        "Message_sent" : "Test Message Registre",
+        "Message_received" : null
+    },
+
+    "Counter" : {
+        "name" : "counter",
+        "dependences" : [
+            "kafka",
+            "zookeeper",
+            "api"
+        ],
+        "type" : {
+            "producer":true,
+            "listener":false
+        },
+        "topic_name" : "topic_test",
+        "Message_sent" : null,
+        "Message_received" : "Test Message Registre"        
+    },
+
+    "DoubleCounter" : {
+        "name" : "doublecounter",
+        "dependences" : [
+            "kafka",
+            "zookeeper",
+            "api"
+        ],
+        "type" : {
+            "producer":true,
+            "listener":false
+        },
+        "topic_name" : "topic_test",
+        "Message_sent" : null,
+        "Message_received" : "Test Message Registre"
+    }
+}
+    
